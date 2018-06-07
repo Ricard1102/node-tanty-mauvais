@@ -1,0 +1,69 @@
+<!--==========================
+  Testimonials Section
+  ============================-->
+<section id="testimonials">
+  <div class="container wow fadeInUp">
+    <div class="row">
+      <div class="col-md-12">
+        <h3 class="section-title">Happy Patients</h3>
+        <div class="section-title-divider"></div>
+        <p class="section-description">Read what other patients of the clinic think about us</p>
+      </div>
+    </div>
+
+    <div class="container">
+
+
+      <div class="row">
+
+        <div class="col-xs-12">
+          <div id="google-reviews"></div>
+
+
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js "></script>
+          <script src="https://cdn.rawgit.com/stevenmonson/googleReviews/6e8f0d79/google-places.js "></script>
+          <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyAILk-KjSRSeXsJYn7GF82mLUWR0qZ9N_k&signed_in=true&libraries=places "></script>
+
+          <script>
+            jQuery(document).ready(function ($) {
+              $("#google-reviews").googlePlaces({
+                placeId: 'ChIJM63sJx1acUgRex-L1c-jV3E' //Find placeID @: https://developers.google.com/places/place-id
+                , render: ['reviews']
+                , min_rating: 4
+                , max_rows: 1
+              });
+            });
+          </script>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <script language='javascript1.1'>
+            var nr_placeid = 'ChIJM63sJx1acUgRex-L1c-jV3E';
+            var nr_width = '100%';
+            var nr_height = 380;
+            var nr_directreviewbox = 0;
+            var nr_buttonCol = "df4a32 "; // Amend this value to change your review button colour (hex color values only rrggbb)
+            var nr_transparency = false; // Set this to true to have a transparent widget with no border
+          </script>
+          <script language='javascript1.1' src='https://www.netrite.net/google-review-code/googlereviews_ssl.js'></script>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+    {{!--
+    <div class="quote g-post " data-href="https://plus.google.com/110305096641053854518/posts/VDE662deNcT ">
+
+    </div> --}}
+
+
+  </div>
+
+
+
+
+</section>

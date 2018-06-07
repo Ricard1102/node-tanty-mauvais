@@ -1,0 +1,65 @@
+<!--==========================
+  Subscribe Section
+  ============================-->
+<section id="subscribe">
+  <div class="container wow fadeInUp">
+    <div class="row">
+      <div class="col-md-8">
+        <h3 class="subscribe-title">Subscribe For Updates</h3>
+        <p class="subscribe-text">Join our 100+ subscribers and get access to the latest treatments in podiatry, services, health products and amazing
+          discounts!
+        </p>
+      </div>
+      <div class="col-md-4 subscribe-btn-container">
+        <button id="modalBtn" class="subscribe-btn button">Subscribe Now</button>
+
+        <div id="simpleModal" class="modal">
+          <div class="modal-content">
+            <div class="modal-header">
+              <span class="closeBtn">&times;</span>
+              <h2>The Beute Clinic newsletter</h2>
+            </div>
+            <div class="modal-body">
+              <p>Please fill the form below to subscribe to the Beute Clinic newsletter and receive updates about new services
+                and discounts</p>
+
+
+
+
+
+
+              <div class="form">
+
+                <div id="errormessage"></div>
+                <form action="send" method="POST" class="contactForm">
+                  <div class="form-group col-lg-6">
+                    <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars"
+                    />
+                    <div class="validation"></div>
+                  </div>
+                  <div class="form-group col-lg-6">
+                    <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email"
+                    />
+                    <div class="validation"></div>
+                  </div>
+
+                  <div class="text-center">
+                    <button type="submit">SUBSCRIBE</button>
+                  </div>
+                </form>
+
+
+
+
+
+
+
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+</section>

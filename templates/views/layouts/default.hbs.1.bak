@@ -1,0 +1,93 @@
+<head>
+	<meta charset="utf-8">
+	<title>{{pageTitle}}</title>
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+
+	<meta content="{{keywords}}" name="keywords">
+	<meta content="{{metaDescription}}" name="description">
+
+	<!-- Facebook Opengraph integration: https://developers.facebook.com/docs/sharing/opengraph -->
+	<meta property="og:title" content="">
+	<meta property="og:image" content="">
+	<meta property="og:url" content="">
+	<meta property="og:site_name" content="">
+	<meta property="og:description" content="">
+
+	<!-- Twitter Cards integration: https://dev.twitter.com/cards/  -->
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:site" content="">
+	<meta name="twitter:title" content="">
+	<meta name="twitter:description" content="">
+	<meta name="twitter:image" content="">
+
+	<!-- Place your favicon.ico and apple-touch-icon.png in the template root directory -->
+	<link href="public/img/logohannah.png" rel="shortcut icon">
+
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800" rel="stylesheet">
+
+	<!-- Bootstrap CSS File -->
+	<link href="public/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+	<!-- Libraries CSS Files -->
+	<link href="public/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+	<link href="public/lib/animate-css/animate.min.css" rel="stylesheet">
+
+	<!-- Main Stylesheet File -->
+	<link rel="stylesheet" href="public/css/style.css">
+	<link rel="stylesheet" href="public/css/modal.css">
+
+
+	<link rel="stylesheet" href="public/css/google-places.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://cdn.rawgit.com/stevenmonson/googleReviews/6e8f0d79/google-places.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyDeivU57j-macv2fXXgbhKGM6cqMLmnAFI&signed_in=true&libraries=places"></script>
+
+</head>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="10">
+
+
+
+
+
+	<div style="position: relative; width:100%; z-index:1;">
+		{{>hero}}
+	</div>
+	<div style="width:100%;">
+		{{> about}} {{> services}} {{> testimonials}} {{> maps}} {{> contact}}{{> footer}}
+
+		<a href="#" class="back-to-top">
+			<i class="fa fa-chevron-up "></i>
+		</a>
+
+	</div>
+
+
+
+
+	<!-- Required JavaScript Libraries -->
+	<script src="public/lib/jquery/jquery.min.js "></script>
+	<script src="public/lib/bootstrap/js/bootstrap.min.js "></script>
+	<script src="public/lib/superfish/hoverIntent.js "></script>
+	<script src="public/lib/superfish/superfish.min.js "></script>
+	<script src="public/lib/morphext/morphext.min.js "></script>
+	<script src="public/lib/wow/wow.min.js "></script>
+	<script src="public/lib/stickyjs/sticky.js "></script>
+	<script src="public/lib/easing/easing.js "></script>
+	<script type="text/javascript " src="https://apis.google.com/js/plusone.js "></script>
+
+
+	<!-- Template Specisifc Custom Javascript File -->
+
+	<script src="public/js/custom.js "></script>
+	<script src="public/js/scrollspy.js "></script> {{!--
+	<script src="public/contactform/contactform.js "></script> --}}
+	<script src="public/js/modal.js "></script>
+
+
+
+</body>
+
+</html>

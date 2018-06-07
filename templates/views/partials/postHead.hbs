@@ -1,0 +1,58 @@
+<head>
+  <meta charset="utf-8">
+  <title>{{data.post.title}}</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+
+  <meta name="keywords" content="{{# each data.post.categories}}{{name}}, {{/each}}">
+  <meta name="description" content="{{data.post.content.metadescription}}">
+
+  <meta property="og:description" content="{{data.post.content.metadescription}}">
+  <meta name="twitter:description" content="{{data.post.content.metadescription}}">
+
+
+
+  <!-- Facebook Opengraph integration: https://developers.facebook.com/docs/sharing/opengraph -->
+  <meta property="og:title" content="">
+  <meta property="og:image" content="">
+  <meta property="og:url" content="">
+  <meta property="og:site_name" content="">
+  <meta property="og:description" content="">
+
+  <!-- Twitter Cards integration: https://dev.twitter.com/cards/  -->
+  <meta property="og:type" content="article">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="og:image" content="{{data.post.image.url}}">
+  <meta name="twitter:image:src" content="{{data.post.image.url}}">
+  <meta property="og:url" content="{{data.post.fullPostUrl}}">
+  <meta name="twitter:url" content="{{data.post.fullPostUrl}}">
+  <meta property="article:published_time" content="{{data.post.publishedDate}}"> {{# each data.post.categories}}
+  <meta property="article:tag" content="{{name}}"> {{/each}}
+
+
+  <!-- Place your favicon.ico and apple-touch-icon.png in the template root directory -->
+  <link href="/img/logoBlack.png" rel="shortcut icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800" rel="stylesheet">
+
+  <!-- Bootstrap CSS File -->
+  <link href="/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <link href="/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="/lib/animate-css/animate.min.css" rel="stylesheet">
+
+  <!-- Main Stylesheet File -->
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/modal.css">
+
+
+  <link rel="stylesheet" href="/css/google-places.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://cdn.rawgit.com/stevenmonson/googleReviews/6e8f0d79/google-places.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyDeivU57j-macv2fXXgbhKGM6cqMLmnAFI&signed_in=true&libraries=places"></script>
+  <script type='text/javascript' src='//platform-api.sharethis.com/js/sharethis.js#property=5b0559ed4919d9001117884f&product=inline-share-buttons'
+    async='async'></script>
+
+</head>

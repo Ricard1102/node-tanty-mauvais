@@ -1,0 +1,119 @@
+<!--==========================
+  Contact Section
+  ============================-->
+<section id="contact">
+  <div class="container wow fadeInUp">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-md-12">
+          <h3 class="section-title">Contact</h3>
+          <div class="section-title-divider">
+          </div>
+          <p class="section-description" style="margin-bottom:20px;">Don't hesitate to get it touch if you want to find out more about Tanty Mauvais and her poetry from the Caribbean
+          </p>
+
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-md-4 col-lg-4">
+
+          <div class="container">
+            <div class="row">
+              <div class="col-xs-3 col-md-1">
+                <i class="fa fa-envelope"></i>
+              </div>
+              <div class="col-xs-7 col-md-3">
+                <p>{{webmail}}</p>
+              </div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-xs-3 col-md-1">
+                <i class="fa fa-phone"></i>
+              </div>
+              <div class="col-xs-7 col-md-3">
+                <p>{{businessPhone}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+          <div class="form">
+            <div id="sendmessage">Your message has been sent. ¡Thanks!</div>
+            <div id="errormessage"></div>
+            <form action="send" method="POST" class="contactForm">
+              <div class="form-group">
+                <input type="text" name="name" class="form-control" id="name" placeholder="Nombre" data-rule="minlen:4" data-msg="Please enter at least 4 chars"
+                />
+                <div class="validation"></div>
+              </div>
+              <div class="form-group">
+                <input type="email" class="form-control" name="email" id="email" placeholder="Email" data-rule="email" data-msg="Please enter a valid email"
+                />
+                <div class="validation"></div>
+              </div>
+              <!-- CUSTOM TELPH RICARD-->
+              {{!--
+              <div class="form-group">
+                <input type="phone" class="form-control" name="phone" id="phone" placeholder="Your Phone number" data-rule="phone" data-rule="minlen:10"
+                  data-msg="Please enter a valid phone number" />
+                <div class="validation"></div>
+              </div> --}} {{!--
+              <div class="form-group">
+                <select id="treatment" name="treatment">
+                  <option value="Choose a treatment">Choose a treatment</option>
+                  <option value="First visit and assessm.">First visit and assessm.</option>
+                  <option value="Repeat visit">Repeat visit</option>
+                  <option value="Pronto">Pronto</option>
+                  <option value="Medi peri">Medi peri</option>
+                  <option value="Diabetic foot assessm.">Diabetic foot assessm.</option>
+                  <option value="Nail Surgery">Nail Surgery</option>
+                  <option value="Verruca Treatment">Verruca Treatment</option>
+                  <option value="Biomechanical assessm.">Biomechanical assessm.</option>
+                  <option value="Orthotics">Orthotics</option>
+                  <option value="Others">Others</option>
+                </select>
+              </div> --}}
+
+
+
+
+
+              <div class="form-group">
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least  chars of subject"
+                />
+                <div class="validation"></div>
+              </div>
+              <div class="form-group">
+                <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+                <div class="validation"></div>
+              </div>
+              <div class="text-center">
+                <button type="submit">Send Message</button>
+              </div>
+            </form>
+          </div>
+
+
+        </div>
+      </div>
+
+
+
+
+
+
+
+    </div>
+
+</section>
+<!--==========================
+  End of Contact Section
+  ============================-->

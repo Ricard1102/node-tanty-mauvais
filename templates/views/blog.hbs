@@ -1,0 +1,157 @@
+ {{!--
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+ crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+ crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+ crossorigin="anonymous"></script> --}}
+
+<!DOCTYPE html>
+<html lang="es">
+{{>blogHead}}
+
+
+
+
+
+
+
+
+
+
+
+
+<body>
+	<section id="blog">
+		{{>blogHeader}}
+		<div class="container">
+			<h2>Blog de Téradam</h2>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-8 col-md-9">
+					<p class="text-weight-normal">Bienvenidos al blog de Téradam. Descubre las últimas novedades sobre la trilogía Téradam, sus personajes, nuevas publicaciones,
+						eventos y su autor, y compártelas en tus redes sociales.</p>
+					{{!--
+					<h4 class="text-weight-normal">Showing {{ data.posts.results.length}} post.</h4> --}}
+					<div class="blog wow fadeInUp">
+						{{# each data.posts.results}}
+						<div data-ks-editable="{{#if ../user}}{{adminEditableUrl ../../user _id}}{{/if}}" class="post">
+
+							{{#if image}}
+							<div align="center" class="post-img">
+								<img align="center" src="{{{cloudinaryUrl image crop='fill' }}}" class="img">
+							</div>
+							{{/if}} {{!--
+							<img align="center" src="{{{cloudinaryUrl image width=360 crop='fit' }}}" class="img"> --}}
+
+							<h3 align="center">
+								<a href="{{postUrl slug}} ">{{{title}}}</a>
+							</h3>
+
+							<p align="center " class="lead text-muted ">{{{categoryList categories prefix="Posted in "}}} {{#if author.name.first}}by {{author.name.first}} on {{date publishedDate
+								format='DD/MM/YYYY'}} {{/if}}
+							</p>
+
+
+							<div align="center" class="social-share-blog">
+
+								<a class="ion-social-twitter" href="https://twitter.com/intent/tweet?text=El Blog de Téradam acaba de publicar un artículo que quizás te interese: %20{{data.post.title}}&url={{data.post.fullPostUrl}}"
+								 onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+									<i class="fa fa-twitter"></i>
+								</a>
+								<a class="ion-social-facebook" href="https://www.facebook.com/sharer/sharer.php?u={{data.post.fullPostUrl}}" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+									<i class="fa fa-facebook"></i>
+								</a>
+								<a href="">
+									<i class="fa fa-instagram"></i>
+								</a>
+
+								<a href="whatsapp://send?text={{data.post.fullPostUrl}}" data-action="share/whatsapp/share">
+									<i class="fa fa-whatsapp"></i>
+								</a>
+
+							</div>
+
+
+							<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+							<script type="text/javascript" src="/js/share.js">
+
+
+
+							</script>
+
+
+							<div align="center " class="brief ">
+								<p>{{{content.brief}}}</p>
+							</div>
+
+							{{#if content.extended}}
+							<div class="text-center">
+								<a class="none" href="{{postUrl slug}}">
+									<button class="btn btn-collapse pulse" type="button">
+										READ MORE
+									</button>
+								</a>
+							</div>
+							{{/if}}
+						</div>
+						{{/each}}
+					</div>
+				</div>
+				<div class="col-sm-4 col-md-3 ">
+					<h2>Categorías</h2>
+					<div style="margin-top: 70px; " class="list-group ">
+						<a href="/blog " class="allcategories active list-group-item ">Todas las categorías</a>
+						{{# each data.categories }}
+						<a href="{{categoryUrl key}} " class="false list-group-item ">{{name}}</a>
+						{{/each}}
+					</div>
+				</div>
+			</div>
+			{{>pagination}}
+		</div>
+
+		<a href="# " class="back-to-top ">
+			<i class="fa fa-chevron-up "></i>
+		</a>
+
+		</div>
+
+		{{>footer}}
+
+
+		<script src="/lib/jquery/jquery.min.js "></script>
+		<script src="/lib/bootstrap/js/bootstrap.min.js "></script>
+		<script src="/lib/superfish/hoverIntent.js "></script>
+		<script src="/lib/superfish/superfish.min.js "></script>
+		<script src="/lib/morphext/morphext.min.js "></script>
+		<script src="/lib/wow/wow.min.js "></script>
+		<script src="/lib/stickyjs/sticky.js "></script>
+		<script src="/lib/easing/easing.js "></script>
+		<script type="text/javascript " src="https://apis.google.com/js/plusone.js "></script>
+
+
+
+
+		<script src="/js/custom.js "></script>
+		<script src="/js/scrollspy.js "></script>
+		<script src="/js/modal.js "></script>
+
+	</section>
+
+	{{!--
+	<script type="text/javascript" src="//platform-api.sharethis.com/js/sharethis.js#property=5b0559ed4919d9001117884f&product=custom-share-buttons"></script> --}}
+
+	<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
+</body>
+
+
+</html>
